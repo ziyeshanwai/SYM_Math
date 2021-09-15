@@ -2,7 +2,7 @@ clc;
 clear all;
 syms x y z lamda u v fx fy cx cy 
 P = sym('P%d%d', [3 4]);  % Projection Matrix
-K = [fx,0,0;0,fy,0;0,0,1];
+K = [fx,0,cx;0,fy,cy;0,0,1];
 point = [[x]; [y]; [z]; 1]; % points
 uv =K * P*point;
 % lamda * u == uv(1)
